@@ -1,2 +1,2 @@
 # Data-Analysis-Coding-Tutorials
-Introduction to different types of data analysis in various different languages. 
+This repository consists of data analysis coding tutorial I put together as a part of my economics teaching duties at University of Toronto. You can find a mixture of introductory and advanced tutorials here in languages commonly used in Economics. 
