@@ -23,6 +23,9 @@ use "Card1995.dta", clear
 
 ** Replicating some summary statistics (Table 1)
 
+* Summary statistics
+sum educ age black wage married
+
 * Family structure  
 gen family_structure = 0 if momdad14 == 1
 replace family_structure = 1 if sinmom14 == 1
