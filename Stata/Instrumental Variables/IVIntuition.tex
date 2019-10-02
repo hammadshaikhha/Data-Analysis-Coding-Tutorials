@@ -1,0 +1,113 @@
+\documentclass[compress]{beamer}
+\usetheme{Copenhagen}
+\usecolortheme{seahorse}
+\useoutertheme[subsection=false]{miniframes}
+\usepackage[normalem]{ulem}
+\usepackage{epstopdf}
+\usepackage{lmodern}
+\usepackage[T1]{fontenc}
+\usepackage{booktabs, multicol, multirow}
+\usepackage{pbox}
+\usepackage{fix-cm}
+\usepackage{amsthm}
+\usepackage{color}
+\usepackage{dsfont}
+\usepackage{appendixnumberbeamer}
+\usepackage{xcolor}
+
+
+\beamertemplatenavigationsymbolsempty
+\setbeamertemplate{footline}[frame number]
+\usepackage{graphicx}
+\newcommand{\indep}{\rotatebox[origin=c]{90}{$\models$}}
+
+
+\newtheorem{axiom}{Axiom}
+\newtheorem{proposition}[theorem]{Proposition}
+
+
+    \newcommand{\overbar}[1]{\mkern 2mu\overline{\mkern-2mu#1\mkern-2mu}\mkern 2mu}
+\newcommand{\sfrac}[2]{\textstyle{\frac{#1}{#2}}\displaystyle{}}
+
+\title[Lecture 7]{Tutorial: Instrumental Variables Intuition}
+\author[Hammad Shaikh]{Hammad Shaikh}
+\date{}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\begin{frame}{Instrumental Variable Application}
+
+\begin{itemize}
+\vspace*{-1cm}
+\setlength\itemsep{2.5em}
+\item Question: What is the causal effect from going to college on earnings?
+\item Outcome $Y =$ earnings, policy variable $X =$ I(college grad)
+\item Regression: $Y = \beta_{0} + \beta_{1}X + \epsilon$
+\begin{itemize}
+\item Selection bias: individuals that choose to attend college are different from the ones that don't attend
+\end{itemize}
+\item \textcolor{red}{Suppose $Z = $ I(college aid) is randomly given to HS students} 
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Instrumental Variable Intuition}
+
+\begin{itemize}
+\vspace*{-1.5cm}
+\setlength\itemsep{4em}
+\item Endogenity problem: $\triangle X$ implies $\triangle Y = \triangle Y_{X} + \triangle Y_{\epsilon}$
+\begin{itemize}
+\item Occurs because $\triangle X  \iff \triangle \epsilon \implies \triangle Y_{\epsilon}$
+\end{itemize}
+
+\item Solution: Use only exogenous variation in $X$ for estimation
+\item Suppose $Z  \indep  \epsilon$ and $Z$ is related to $X$
+
+\end{itemize}
+
+\end{frame}
+
+\begin{frame}{Instrumental Variable Intuition}
+
+\begin{itemize}
+\vspace*{-1.5cm}
+\setlength\itemsep{4.5em}
+\item Z effects $Y$ only through $X$: $\triangle Z \implies \triangle X_{z} \implies \triangle Y_{X_z} $
+\item IV Estimate: $\widehat{\beta}_{IV} = \frac{\triangle Y_{X_{z}}}{\triangle X_{z}}$
+\begin{itemize}
+\item $\widehat{b}_{1}$ has a causal interpretation if $Z \indep \epsilon$ and $Corr(Z,X) \ne 0$
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+\begin{frame}{Instrumental Variables Framework}
+
+\begin{itemize}
+\vspace*{-1.5cm}
+\setlength\itemsep{2em}
+\item Suppose $Corr(X, \epsilon) \ne 0$, endogeneity problem
+\item A instrumental variable $Z$ satisfies:
+\begin{itemize}
+\setlength\itemsep{1em}
+\item $Corr(Z,X) \ne 0,$ that is $Z$ related to $X$
+\item $Z$ doesn't directly effect outcome $Y$
+\item $Z \indep \epsilon$, $Z$ is randomly assigned 
+\end{itemize}
+\item $\widehat{\beta}_{IV}$ estimates Local Average Treatment Effect (LATE)
+\begin{itemize}
+\item ATE for those who comply with instrument
+\end{itemize}
+\end{itemize}
+
+\end{frame}
+
+
+
+
+
+\end{document}

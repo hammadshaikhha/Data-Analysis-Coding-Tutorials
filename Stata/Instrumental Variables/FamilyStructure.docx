@@ -1,0 +1,42 @@
+{\rtf1\ansi\deff0 {\fonttbl{\f0\fnil Garamond;}}
+{\info {\author .}{\company .}{\title .}}
+\deflang1033\plain\fs20
+{\footer\pard\qc\plain\f0\fs20\chpgn\par}
+{
+{
+{\b\qc\line Tabulation of family_structure }{\par}
+\trowd\trgaph108\trleft-108\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx2200\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx3700\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx5200\clbrdrt\brdrw10\brdrs \clbrdrb\brdrw25\brdrs\cellx6700
+\ql { }\cell
+\qr { Freq.}\cell
+\qr { Percent}\cell
+\qr { Cum.}\cell
+\row
+\trowd\trgaph108\trleft-108\cellx2200\cellx3700\cellx5200\cellx6700
+\ql { Mom and Dad}\cell
+\qr {2376}\cell
+\qr {78.94}\cell
+\qr {78.94}\cell
+\row
+\ql { Mom only}\cell
+\qr {303}\cell
+\qr {10.07}\cell
+\qr {89.00}\cell
+\row
+\ql { Step parent}\cell
+\qr {117}\cell
+\qr {3.89}\cell
+\qr {92.89}\cell
+\row
+\ql { Other}\cell
+\qr {214}\cell
+\qr {7.11}\cell
+\qr {100.00}\cell
+\row
+}
+{\trowd\trgaph108\trleft-108
+\clbrdrb\brdrw15\brdrs\cellx6700\cell
+\row}
+
+
+\writepositionforappend
+}}
